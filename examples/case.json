@@ -1,0 +1,42 @@
+{
+  "case_id": "CASE-1042",
+  "customer": {
+    "id": "customer_demo_17",
+    "name": "Example Retail Co.",
+    "cluster": "cluster_demo"
+  },
+  "category": "data_collection",
+  "title": "Fresh marketplace reviews are not appearing",
+  "description": "The customer reports that new reviews have not appeared since this morning. A screenshot shows the last visible item is older than expected.",
+  "status": "investigating",
+  "messages": [
+    {
+      "role": "customer",
+      "text": "Hi, it looks like new reviews stopped coming in this morning. Can you check?"
+    },
+    {
+      "role": "customer",
+      "text": "Attaching a screenshot — the newest review is still from yesterday."
+    }
+  ],
+  "evidence": {
+    "visual_context": "Screenshot indicates stale data in the customer UI.",
+    "knowledge_base_matches": [
+      "Check connector activity",
+      "Check authentication state",
+      "Check recent ingestion errors"
+    ],
+    "diagnostic_summary": "Read-only diagnostics requested; no write action executed."
+  },
+  "escalation": {
+    "required": true,
+    "draft_created": true,
+    "external_ticket_created": false,
+    "approval_required": true
+  },
+  "timestamps": {
+    "created_at": "2026-09-12T09:15:00Z",
+    "updated_at": "2026-09-12T09:19:00Z"
+  },
+  "note": "Synthetic example only. No production customer data is included."
+}
