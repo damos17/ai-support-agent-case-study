@@ -43,6 +43,14 @@ The important part is that the system is not just a chatbot.
 | Deployment | Docker Compose |
 | Application stack | Python 3.11, aiogram, FastAPI, SQLite |
 
+## Companion runnable demo
+
+This case study describes the production architecture at a sanitized level. A separate public repository reimplements the same operational patterns with synthetic data and can be run locally:
+
+**[AI Support Triage — Runnable Demo](https://github.com/damos17/ai-support-triage-demo)**
+
+The demo includes incident correlation, persistent case state, audit trail, evaluation metrics, telemetry, bilingual EN/RU UI, XSS escaping checks, and human-in-the-loop ticket approval. It exists so the architecture described here can be evaluated without access to production code, customer conversations, credentials, or internal infrastructure.
+
 ## High-level architecture
 
 ```mermaid
@@ -215,9 +223,13 @@ It does **not** contain:
 - production database schemas or dumps;
 - private logs or support messages.
 
-## Next project
+## Related public demo
 
-A separate open-source **AI Support Triage Demo** will reimplement the core ideas using synthetic data so the workflow can be run locally without access to the production environment.
+The companion open-source project is already available:
+
+**[AI Support Triage — Runnable Demo](https://github.com/damos17/ai-support-triage-demo)**
+
+It demonstrates the same core patterns — triage, case state, incident correlation, auditability, evaluation, and explicit approval — using only synthetic data.
 
 ---
 
